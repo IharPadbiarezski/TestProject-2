@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  color: #000;
+  background: #fff;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  color: #fff;
+}
+
+.container {
+  max-width: 1141px;
+  margin: 0 auto;
+}
+
+/* Start HEADER */
+
+header {
+  height: 64px;
+  background: #00897b;
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+
+.header {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  font-size: 22px;
+  display: none;
+  width: 30px;
+}
+
+#toggle {
+  display: none;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  color: #fff;
+  height: 64px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+  text-transform: uppercase;
+  margin-left: 30px;
+  padding-top: 32px;
+  box-sizing: border-box;
+  display: block;
+}
+
+nav a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+/* Start Main */
+
+main {
+  width: 100%;
+  min-height: calc(100vh - 96px);
+  display: flex;
+  padding-top: 64px;
+}
+
+.section-1 {
+  width: 50%;
+  background: #eee;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.content {
+  width: 571px;
+  display: flex;
+  justify-content: center;
+}
+
+.picarea {
+  max-width: 400px;
+  margin-right: 22px;
+  margin-left: 22px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.fig {
+  width: 168px;
+  height: 212px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+figure {
+  width: 168px;
+  height: 164px;
+  background: url('../img/img.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+figure h3 {
+  padding-top: 126px;
+  padding-left: 15px;
+}
+
+figcaption {
+  display: flex;
+  width: 168px;
+  height: 48px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+figcaption a {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+figcaption a:first-child {
+  background: url('../img/icons.png') 0 0 no-repeat;
+}
+
+figcaption a:nth-child(2) {
+  background: url('../img/icons.png') -48px 0 no-repeat;
+}
+
+figcaption a:last-child {
+  background: url('../img/icons.png') -96px 0 no-repeat;
+}
+
+.section-2 {
+  width: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.textarea {
+  width: 571px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.textarea p {
+  font-size: 14px;
+  max-width: 378px;
+  line-height: 28px;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+/* Start FOOTER */
+
+footer {
+  height: 96px;
+  background: #000;
+}
+
+.footer {
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #fff;
+}
+
+.social {
+  display: flex;
+  margin-left: 50px;
+}
+
+.social a {
+  width: 38px;
+  height: 38px;
+  font-size: 20px;
+  line-height: 38px;
+  text-align: center;
+  background: #fff;
+  border-radius: 50%;
+  display: block;
+}
+
+.social a {
+  margin-right: 20px;
+}
+
+.social a:last-child {
+  margin-right: 0;
+}
+
+.social a:first-child:hover {
+  background: #3b5998;
+}
+
+.social a:nth-child(2):hover {
+  background: #bd081c;
+}
+
+.social a:last-child:hover {
+  background: #057299;
+}
+
+@media screen and (max-width: 1170px) {
+  .container {
+    width: 97.5%;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .picarea {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  label {
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+  }
+  nav {
+    text-align: center;
+    width: 40%;
+    display: none;
+    background: #00897b;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+  nav a {
+    display: block;
+    border-bottom: 1px solid #EAEAEB;
+    margin: 0;
+  }
+  #toggle:checked+nav {
+    display: block;
+  }
+  article img {
+    width: 95%;
+    height: 95%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  main {
+    flex-direction: column;
+  }
+  .section-1 {
+    width: 100%;
+  }
+  .section-2 {
+    width: 100%;
+  }
+  .social a {
+    margin-right: 5px;
+  }
+}
